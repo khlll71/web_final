@@ -19,7 +19,7 @@ def load_model(model_path):
 def _display_detected_frames(model, st_frame, image):
 
     #image = cv2.resize(image, (720, int(720*(9/16))))
-    res = model.predict(image,device=1,retina_masks=True,augment=True,visualize=True,save=False)
+    res = model.predict(image,device='cpu',retina_masks=True,augment=True,visualize=True,save=False)
     res_plotted = res[0].plot(conf=False,font_size=20,font='Ariel.ttf',pil=True)
     st_frame.image(res_plotted,
                    caption='Detected Video',
