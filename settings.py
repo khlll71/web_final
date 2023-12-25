@@ -23,7 +23,7 @@ RTMP = 'RTMP'
 SOURCES_LIST = [IMAGE, VIDEO, RTMP]
 
 # Images config
-IMAGES_DIR = ROOT / 'images'
+IMAGES_DIR = ROOT
 DEFAULT_IMAGE = IMAGES_DIR / 'upload.png'
 DEFAULT_DETECT_IMAGE = IMAGES_DIR / 'upload.png'
 
