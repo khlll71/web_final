@@ -141,7 +141,7 @@ if st.session_state.selected_button == "image_bt":
 
     with col2:
         if st.sidebar.button('Start Detect',key='detect'):
-            res = model.predict(uploaded_image,device=0,retina_masks=True,save=False)
+            res = model.predict(uploaded_image,device='cpu',retina_masks=True,save=False)
             boxes = res[0].boxes
             res_plotted = res[0].plot(conf=False)[:, :, ::-1]
             st.image(res_plotted, caption='Detected Image',
